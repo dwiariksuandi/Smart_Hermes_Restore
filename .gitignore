@@ -116,3 +116,4 @@ hermes-agent/
 auth.lock
 auth.json
 */auth.json
+channel_directory.json
