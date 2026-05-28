@@ -414,10 +414,12 @@ approvals:
   mcp_reload_confirm: true
   destructive_slash_confirm: true
 command_allowlist:
+- delete in root path
 - recursive delete
 - script execution via -e/-c flag
+- git force push (rewrites remote history)
 - overwrite system file via redirection
-- delete in root path
+- pipe remote content to shell
 quick_commands: {}
 hooks: {}
 hooks_auto_accept: false

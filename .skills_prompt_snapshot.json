@@ -153,6 +153,10 @@
       1779910067621060097,
       2148
     ],
+    "devops/secure-agent-ops-lifecycle/SKILL.md": [
+      1779952685237407024,
+      3686
+    ],
     "devops/webhook-subscriptions/SKILL.md": [
       1779865913353200862,
       6836
@@ -194,7 +198,7 @@
       9985
     ],
     "github/github-repo-management/SKILL.md": [
-      1779865913357200881,
+      1779949153428140887,
       13683
     ],
     "mcp/native-mcp/SKILL.md": [
@@ -338,7 +342,7 @@
       9137
     ],
     "software-development/hermes-architecture-hardening/SKILL.md": [
-      1779944619801977116,
+      1779949153428140887,
       4347
     ],
     "software-development/hermes-s6-container-supervision/SKILL.md": [
@@ -1103,6 +1107,19 @@
       "category": "devops",
       "frontmatter_name": "memory-compression",
       "description": "Compress Hermes telemetry/activity logs into long-term se...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "secure-agent-ops-lifecycle",
+      "category": "devops",
+      "frontmatter_name": "secure-agent-ops-lifecycle",
+      "description": "Secure lifecycle operations for agent-owned runtime direc...",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
