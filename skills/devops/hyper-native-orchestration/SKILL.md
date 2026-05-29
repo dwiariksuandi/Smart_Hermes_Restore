@@ -95,3 +95,5 @@ Before agent execution (Orchestrator, Scout, Dev), check `vault/skills/` and app
 - **Token Inflation**: Passing large files via `read_file` into context is expensive. Use `rg` inside `execute_code` to filter before reading.
 - **Wrong ARCH**: Obsidian release assets include both `arm64` and `x86_64` AppImages. Filter by architecture string or fallback to the generic `Obsidian-<ver>.AppImage` which is x86_64.
 - **Premature success claim**: claiming complete before SOP patch/file-tree proof causes trust drift. Always verify physically first.
+- **Config tail blind spot**: never conclude a key is absent from `config.yaml` without reading full file (or targeted search). `read_file` can truncate; verify with offset continuation or key search before proposing "add config" changes.
+- **Credential gate handling**: when execution is blocked by missing token/CLI, report exact blocker + exact file/field to update, then pause. Do not continue with speculative mutations.

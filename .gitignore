@@ -119,3 +119,20 @@ auth.json
 channel_directory.json
 bin/
 processes.json
+# Hermes session-private files
+MEMORY.md
+USER.md
+cron/jobs.json
+.restart_last_processed.json
+.update_check
+.hermes_history
+config.yaml.backup_pre_composio_removal
+config.yaml.backup_pre_update_*
+config.yaml.bak-*
+config.yaml.bak.*
+gateway.lock
+gateway.pid
+kanban.db.init.lock
+mcp_list_tools.py
+scripts/
+state-snapshots/

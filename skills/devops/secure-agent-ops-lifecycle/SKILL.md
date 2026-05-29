@@ -70,11 +70,13 @@ git push -u origin main --force
 ```
 
 ## Verification Checklist
-- `git status` says working tree clean or only intentional ignored runtime files remain.
+- `git status` says exactly `nothing to commit, working tree clean` when user requests **literal Absolute Zero**.
+- If `git status` shows untracked runtime residue (e.g., `bin/`, `processes.json`), append ignore rules and re-check before final report.
+- If `git status` shows untracked knowledge artifacts meant for vault backup (e.g., new `skills/...`), stage+commit+push them.
 - `git log --oneline -3` shows expected commits.
 - `git remote -v` points to correct SSH URL.
 - grep/secret sweep finds no active keys in tracked files.
-- `.gitignore` contains `.env`, `auth.json`, `auth.lock`, `*.db`, `*.log`, `*.bak`, `venv/`, `__pycache__/`.
+- `.gitignore` contains `.env`, `auth.json`, `auth.lock`, `*.db`, `*.log`, `*.bak`, `venv/`, `__pycache__/`, plus runtime files created during remediation (`bin/`, `processes.json`) when applicable.
 
 ## Pitfalls
 - `ssh -T git@github.com` can exit non-zero even when successful; inspect text output.
